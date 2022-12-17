@@ -81,11 +81,11 @@ int main(void){
         elapsed_seconds+=1;
         second=0;
     }
-    if(elapsed_seconds%10==0){
+    if(elapsed_seconds%10==0 && elapsed_second!=0){
         input_chars=*INPORT;
-        hexdig1=(input_chars & 0xF000>>12);
-        hexdig2=(input_chars & 0x0F00>>8);
-        hexdig3=(input_chars & 0x00F0>>4);
+        hexdig1=(input_chars & 0xF000)>>12;
+        hexdig2=(input_chars & 0x0F00)>>8;
+        hexdig3=(input_chars & 0x00F0)>>4;
         hexdig4=(input_chars & 0x000F);
 
         PrintHexDigit(hexdig1);
