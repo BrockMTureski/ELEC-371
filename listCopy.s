@@ -13,7 +13,7 @@ ListCopy:
 	stw		r4,8(sp)
 	stw		r5,12(sp)
 	stw		r6,16(sp)
-	addi	sp,sp,20
+	subi		sp,sp,20
 	
 	movi	r5,0
 	
@@ -27,7 +27,7 @@ Listfor:
 	beq		r4,r0,ListExit
 	br		Listfor
 ListExit:
-	subi	sp,sp,20
+	addi	sp,sp,20
 	ldw		r2,0(sp)
 	ldw		r3,4(sp)
 	ldw		r4,8(sp)
