@@ -16,7 +16,7 @@ compare:
 	stw		r6,16(sp)
 	stw		r7,20(sp)
 	stw		r8,24(sp)
-	addi	sp,sp,28
+	subi	sp,sp,28
 comparefor:
 	ldw		r7,0(r3)
 	ldw		r8,0(r4)
@@ -36,7 +36,7 @@ compareexit:
 	
 	bgt		r6,r0,comparefor
 	
-	subi	sp,sp,28
+	addi	sp,sp,28
 	ldw		r2,0(sp)
 	ldw		r3,4(sp)
 	ldw		r4,8(sp)
