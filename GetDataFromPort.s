@@ -11,7 +11,7 @@ LOOP:
 	movia	r3,PORT_DATA
 	movi	r6,0x40
 	ldw	r2,0(r2)
-	andi	r2,r6,r2
+	and	r2,r6,r2
 	bne	r6,r2,LOOP
 	
 	ldwio	r3,0(r3)
