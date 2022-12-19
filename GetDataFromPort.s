@@ -9,7 +9,7 @@ GetDataFromPort:
 LOOP:
 	movia	r2,PORT_STATUS
 	movia	r3,PORT_DATA
-	movi	r6,0x40
+	movi	r6,0x20
 	ldw	r2,0(r2)
 	and	r2,r6,r2
 	bne	r6,r2,LOOP
